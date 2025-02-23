@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="categories-container">
+      <div className="category-container">
+        {/* TODO: Add images */}
+        <div className="category-body-container">
+          <h2>Fortnite</h2>
+          <p>View Coaches</p>
+        </div>
+      </div>
+      <div className="category-container">
+        {/* TODO: Add images */}
+        <div className="category-body-container">
+          <h2>Apex Legends</h2>
+          <p>View Coaches</p>
+        </div>
+      </div>
+      <div className="category-container">
+        {/* TODO: Add images */}
+        <div className="category-body-container">
+          <h2>Valorant</h2>
+          <p>View Coaches</p>
+        </div>
+      </div>
+      <div className="category-container">
+        {/* TODO: Add images */}
+        <div className="category-body-container">
+          <h2>Rainbow 6: Siege</h2>
+          <p>View Coaches</p>
+        </div>
+      </div>
+      <div className="category-container">
+        {/* TODO: Add images */}
+        <div className="category-body-container">
+          <h2>Marvel Rivals</h2>
+          <p>View Coaches</p>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
