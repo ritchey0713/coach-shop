@@ -1,5 +1,4 @@
 import './app.scss'
-import Game from './components/game/Game'
 import GameMenu from './components/game/GameMenu';
 const App = () => {
   const allGames = [
