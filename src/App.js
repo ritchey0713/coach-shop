@@ -1,42 +1,40 @@
 
 const App = () => {
+  const allGames = [
+    {
+      id: 1,
+      name: 'Fortnite'
+    },
+    {
+      id: 2,
+      name: 'Apex Legends'
+    },
+    {
+      id: 3,
+      name: 'Valorant'
+    },
+    {
+      id: 4,
+      name: 'Rainbow 6: Siege'
+    },
+    {
+      id: 5,
+      name: 'Marvel Rivals'
+    },
+  ]
   return (
-    <div className="categories-container">
-      <div className="category-container">
-        {/* TODO: Add images */}
-        <div className="category-body-container">
-          <h2>Fortnite</h2>
-          <p>View Coaches</p>
-        </div>
-      </div>
-      <div className="category-container">
-        {/* TODO: Add images */}
-        <div className="category-body-container">
-          <h2>Apex Legends</h2>
-          <p>View Coaches</p>
-        </div>
-      </div>
-      <div className="category-container">
-        {/* TODO: Add images */}
-        <div className="category-body-container">
-          <h2>Valorant</h2>
-          <p>View Coaches</p>
-        </div>
-      </div>
-      <div className="category-container">
-        {/* TODO: Add images */}
-        <div className="category-body-container">
-          <h2>Rainbow 6: Siege</h2>
-          <p>View Coaches</p>
-        </div>
-      </div>
-      <div className="category-container">
-        {/* TODO: Add images */}
-        <div className="category-body-container">
-          <h2>Marvel Rivals</h2>
-          <p>View Coaches</p>
-        </div>
-      </div>
+    <div className="games-container">
+      {
+        allGames.map(({name}) => (
+          <div className="game">
+            <div className="game-img"/>
+            <div className="game-container">
+              <h2>{name}</h2>
+              <p>View Coaches</p>
+            </div>
+          </div>
+        ))
+      }
     </div>
   );
 };
