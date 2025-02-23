@@ -1,30 +1,37 @@
 import './app.scss'
+import Game from './components/game/Game'
+import GameMenu from './components/game/GameMenu';
 const App = () => {
   const allGames = [
     {
       id: 1,
       name: 'Fortnite',
-      size: 'large'
+      size: 'large',
+      image: 'https://fakeimg.pl/600x400/22e674/909090?text=Replace+me'
     },
     {
       id: 2,
       name: 'Apex Legends',
-      size: 'largelarge'
+      size: 'large',
+      image: 'https://fakeimg.pl/600x400/e6225d/909090?text=Replace+me'
     },
     {
       id: 5,
       name: 'Marvel Rivals',
-      size: 'large'
+      size: 'large',
+      image: 'https://fakeimg.pl/600x400/2336e8/909090?text=Replace+me'
     },
     {
       id: 4,
       name: 'Rainbow 6: Siege',
-      size: 'large'
+      size: 'large',
+      image: 'https://fakeimg.pl/600x400/9ce823/909090?text=Replace+me'
     },
     {
       id: 3,
       name: 'Valorant',
-      size: 'large'
+      size: 'large',
+      image: 'https://fakeimg.pl/600x400/22e674/e89623?text=Replace+me'
     },
   ]
 
@@ -36,17 +43,7 @@ const App = () => {
   return (
     <div className="games-container container">
       <div className='row justify-content-center'>
-        {
-          allGames.map(({id, name, size}) => (
-            <div className={`game col-${sizeMapping[size]} border mt-2 ms-2 d-flex justify-content-center`} key={`game-container-${id}`}>
-              <div className="game-img"/>
-              <div className="game-container">
-                <h2>{name}</h2>
-                <p>View Coaches</p>
-              </div>
-            </div>
-          ))
-        }
+        <GameMenu allGames={allGames} sizeMapping={sizeMapping} />
       </div>
     </div>
   );
